@@ -10,9 +10,6 @@ class loop {
         String input = scan.nextLine(); // waits for input
         if(input.equalsIgnoreCase("Nothing"))
         {
-            FileOutputStream fout=new FileOutputStream("testout.txt");
-            fout.write(65);
-            fout.close();
             System.out.println("Correct");
         }
         else 
