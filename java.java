@@ -22,7 +22,15 @@ class loop {
         }
         else 
         {
-            System.out.println("Incorrect");
+            try {
+                FileWriter output = new FileWriter("file_3.txt"); // if something besides "Nothing" is insereted, please append to "file_3.txt"
+                output.write(input);
+                System.out.println("Incorrect");
+                output.close();
+            }
+            catch (Exception e) {
+                e.getStackTrace();
+            }
         }
 
         Scanner myObj = new Scanner(System.in); // create a scanner object
@@ -60,7 +68,8 @@ class loop {
         }
 
         else {
-            System.out.println("You think there should be same taxes for the rich?");
+            System.out.println("Last question: What political party do you affiliate with?");
+            // Democrat, Republican, Left-Wing, Right-Wing.
         }
     }
 }
