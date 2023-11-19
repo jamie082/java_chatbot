@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
+import java.io.FileOutputStream;
 
 class loop {
     public static void main(String[] args) {
@@ -9,6 +10,9 @@ class loop {
         String input = scan.nextLine(); // waits for input
         if(input.equalsIgnoreCase("Nothing"))
         {
+            FileOutputStream fout=new FileOutputStream("testout.txt");
+            fout.write(65);
+            fout.close();
             System.out.println("Correct");
         }
         else 
