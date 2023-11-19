@@ -47,11 +47,19 @@ class loop {
         String output_2 = MyObj2.nextLine(); // waits for input for republican line
         if(output_2.equalsIgnoreCase("Yes"))
         {
-            System.out.println("You think there should be higher taxes for the rich");
+            try {
+                FileWriter fw1 = new FileWriter("file_2.txt"); // write to file_2.txt
+                fw1.write(output_2);
+                fw1.close();
+                System.out.println("You think there should be higher taxes for the rich");
+
+            }
+            catch (Exception e) {
+                e.getStackTrace();
+            }
         }
 
-        else
-        {
+        else {
             System.out.println("You think there should be same taxes for the rich?");
         }
     }
