@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
-import java.io.FileOutputStream;
+import java.io.FileWriter;
 
 class loop {
     public static void main(String[] args) {
@@ -10,7 +10,15 @@ class loop {
         String input = scan.nextLine(); // waits for input
         if(input.equalsIgnoreCase("Nothing"))
         {
-            System.out.println("Correct");
+            try {
+                FileWriter output = new FileWriter("file_1.txt"); // write to file
+                output.write(input);
+                System.out.println("Data is written to the file");
+                output.close();
+            }
+            catch (Exception e) {
+                e.getStackTrace();
+            }
         }
         else 
         {
